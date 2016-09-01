@@ -1,0 +1,34 @@
+<h1>Listing posts</h1>
+<br>
+<a href="../index.html">Go Back to Main Page</a> 
+<br><br>
+<%= link_to 'New Script', new_post_path %>
+<br><br><hr/><br>
+<table id="container">
+  <style type="text/css">
+  .accept {
+    color: blue;
+    font-weight:BOLD;
+  } 
+  </style>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>File Name</th>
+    <!--<th>Title</th>-->
+    <th>Script Content - Bash</th>
+  </tr>
+<% @posts.each do |post| %>
+  <tr>
+    <td ><%= link_to 'Show', post %></td>
+    <td ><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td ><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= post.name %></td>    
+    <!--<td><%= post.title %></td>-->
+    <td><%= post.content %></td>
+  </tr>
+<% end %>
+</table>
+
+<hr/>

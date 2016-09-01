@@ -1,0 +1,51 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <!--<div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  -->
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<div>Examples of scripts that can be uploaded
+</div>
+<div>
+<ul>
+  <li>echo data > data.txt</li>
+  <li>echo data >> data.txt</li>
+  <li>clear</li>
+  <li>mkdir testfolder</li>
+  <li>dir</li>
+  <li>cd ..</li>
+  <li>cd</li>  
+  <li>top</li>
+  
+</ul>
+</div>
+
+<div id="contentfooter">
+  <h3>Bot Made by:</h3>
+  <p>&copy; 2016 Rolando</p>
+</div>
