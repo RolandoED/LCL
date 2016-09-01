@@ -1,6 +1,0 @@
-----
-Command Executed : 5-5-2016 \ 21:49:5
-$  mkdir casa
-----
-Command Executed : 4-8-2016 \ 19:15:33
-$  mkdir casa
